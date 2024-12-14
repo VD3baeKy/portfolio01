@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!-- [html] htmlタグで囲まれた部分が「HTMLによる記述である」ことをブラウザに伝える -->
+<html> <!-- [head] タイトルや説明文など、Webページの各種設定を記述する -->
+  <head>
+    <title>天気のレシピ</title>
+    <meta charset="utf-8">
+    <meta name="description" content="天気のレシピ|">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- [viewport] ビューポートとは、PCやスマートフォンで「Webページの画面をどのように表示させるか」という設定のこと -->
+      <!-- [viewport] width=device-width: device-widthを指定して、画面サイズに合わせていっぱいに広げる -->
+      <!-- [viewport] initial-scale=1.0 :等倍（1.0）を指定して、拡大縮小を行わない -->
+      <!-- [viewport] 拡大縮小させたい場合は、initial-scale の数字を大きくしたり小さくしたりすることで設定する -->
+    <link rel="stylesheet" href="style.css">
+      <!--　linkタグを記述して、style.cssを読み込む -->
+  </head>
+  <body> <!-- [body] 実際にブラウザに表示される内容（記事など）を記述する -->
+    <header>
+      <!-- ヘッダー。ヘッダーはheaderタグをbodyタグの中に記述することで作成できる。 -->
+      <!-- ヘッダーのレイアウトとHTMLタグの組み合わせを確認しておく。 -->
+      <a href="index.html" id="logo">
+        <!-- ロゴ。なるべく相対パスで記載する。 -->
+        <img src="images/logo.png" alt="トップページに戻る">
+      </a>
+      
+      <!-- PC用ナビゲーション -->
+      <nav id="nav-pc"> <!-- navタグでナビゲーションを作成。 -->
+        <ul>　<!-- navタグの中にaタグを記述して、6つのナビゲーションメニューを作成 -->
+          <li><a href="mission.html">MISSION</a></li>
+          <li><a href="product.html">PRODUCT</a></li>
+           <!-- タグのhref属性に、 "HTMLファイル名#id属性値" を指定し、リンク先に設定したい要素のidに先ほど指定したid属性値を設定して"ページ内リンク"を作成 -->
+           <!-- こうすることで、リンク先に変移してから指定したidのあるsection要素の場所までスクロールされる。 -->
+           <!-- 実際にスクロールできるかどうかを各セクションページを作ったあとに確認する -->
+           <li><a href="index.html#aboutus">ABOUT US</a></li>
+          <li><a href="index.html#vision">VISION</a></li>
+          <li><a href="index.html#company">COMPANY</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+  </body>
+  
+</html>
